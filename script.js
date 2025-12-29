@@ -6,9 +6,11 @@ addTask.addEventListener("submit",(task)=>{
     let tasks = document.createElement("div");
     tasks.classList.add("addedtask");
     
-    let h1 = document.createElement("h1");
-    h1.textContent=taskName.value;
+    let unlists = document.createElement("ul"); 
+    let liItem = document.createElement("li");
+    liItem.textContent=taskName.value;
 
-    tasks.appendChild(h1);
+    liItem.appendChild(unlists);
+    tasks.appendChild(liItem);
     main.appendChild(tasks);
 })
